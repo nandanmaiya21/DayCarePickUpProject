@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DayCarePickUpProject</string>
+    <string name="lock_screen_footer_text">ऑफ़लाइन काम करता है · चेहरे का डेटा कभी भी इस डिवाइस से बाहर नहीं जाता</string>
+    <string name="staffSigninText">स्टाफ़ साइन-इन</string>
+    <string name="lockScreenInstructionText">अपना 4-अंकों का पिन दर्ज करें</string>
+
+    <!-- Home screen -->
+    <string name="home_signed_in_role">साइन इन · फ़्रंट डेस्क</string>
+    <string name="home_sign_out">साइन आउट</string>
+    <string name="home_offline_ready">ऑफ़लाइन तैयार</string>
+    <string name="home_verify_title">पिक-अप सत्यापित करें</string>
+    <string name="home_verify_subtitle">एक फ़ोटो + एक पलक। एक सेकंड से भी कम समय।</string>
+    <string name="home_start_face_scan">फ़ेस स्कैन शुरू करें</string>
+    <string name="home_stat_picked_up">ले जाए गए</string>
+    <string name="home_stat_still_here">अभी यहीं हैं</string>
+    <string name="home_stat_overrides">ओवरराइड</string>
+    <string name="home_enrol_guardian">अभिभावक जोड़ें</string>
+    <string name="home_add_child">बच्चा जोड़ें</string>
+    <string name="home_recent_pickups">हाल के पिक-अप</string>
+    <string name="home_see_log">लॉग देखें</string>
+    <string name="status_verified">सत्यापित</string>
+    <string name="status_override">ओवरराइड</string>
+    <string name="nav_home">होम</string>
+    <string name="nav_verify">सत्यापन</string>
+    <string name="nav_children">बच्चे</string>
+    <string name="nav_log">लॉग</string>
+
+    <!-- Child profile -->
+    <string name="action_back">वापस</string>
+    <string name="action_edit">संपादित करें</string>
+    <string name="child_authorized_guardians">अधिकृत अभिभावक</string>
+    <string name="child_add_guardian">अभिभावक जोड़ें</string>
+    <string name="child_this_week">इस सप्ताह</string>
+    <string name="guardian_enrolled">नामांकित</string>
+    <string name="guardian_enrol">नामांकन करें</string>
+
+    <!-- Pick-up log -->
+    <string name="log_title">पिक-अप लॉग</string>
+    <string name="log_search_hint">बच्चा या अभिभावक खोजें</string>
+    <string name="log_today">आज</string>
+    <string name="log_yesterday">कल</string>
+    <string name="log_pick_date">तारीख चुनें</string>
+    <string name="log_tab_all">सभी %1$d</string>
+    <string name="log_tab_verified">सत्यापित %1$d</string>
+    <string name="log_tab_override">ओवरराइड %1$d</string>
+    <string name="log_tab_rejected">अस्वीकृत %1$d</string>
+    <string name="status_rejected">अस्वीकृत</string>
+</resources>

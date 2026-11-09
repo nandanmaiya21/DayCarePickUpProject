@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Children tab: child profile (View layer).
+    Names, rooms and times are sample data; the controller
+    will replace them at runtime using the view IDs.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/childScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:fillViewport="true"
+    tools:context=".Fragments.ChildrenFragment"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp">
+
+        <!-- Top bar: back + edit -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/bg_icon_button"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_chevron_left"
+                app:tint="@color/text_primary"
+                android:contentDescription="@string/action_back" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:minWidth="56dp"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/bg_icon_button"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/action_edit"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+
+        <!-- Child header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvChildInitials"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:gravity="center"
+                android:background="@drawable/bg_avatar_orange_rounded"
+                android:text="AO"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvChildName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ava Okafor"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <TextView
+                    android:id="@+id/tvChildRoomAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunflower Room · Age 4"
+                    android:textSize="17sp"
+                    android:textColor="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvChildStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_badge_verified"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="Picked up · 3:42 PM"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/status_verified_text" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Authorized guardians -->
+        <TextView
+            style="@style/SectionTitle"
+            android:layout_marginTop="28dp"
+            android:text="@string/child_authorized_guardians" />
+
+        <LinearLayout
+            android:id="@+id/guardiansList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Guardian 1 -->
+            <LinearLayout style="@style/GuardianCard">
+                <ImageView style="@style/GuardianPhoto" />
+                <LinearLayout style="@style/GuardianInfo">
+                    <TextView style="@style/PickupName" android:text="Daniel Okafor" />
+                    <TextView style="@style/PickupDetail" android:text="Father · 5 face photos" />
+                </LinearLayout>
+                <TextView style="@style/GuardianEnrolled" />
+            </LinearLayout>
+
+            <!-- Guardian 2 -->
+            <LinearLayout style="@style/GuardianCard">
+                <ImageView style="@style/GuardianPhoto" />
+                <LinearLayout style="@style/GuardianInfo">
+                    <TextView style="@style/PickupName" android:text="Grace Okafor" />
+                    <TextView style="@style/PickupDetail" android:text="Grandmother · 4 face photos" />
+                </LinearLayout>
+                <TextView style="@style/GuardianEnrolled" />
+            </LinearLayout>
+
+            <!-- Guardian 3 (not enrolled yet) -->
+            <LinearLayout style="@style/GuardianCard">
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_avatar_peach"
+                    android:text="MA"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/status_override_text" />
+                <LinearLayout style="@style/GuardianInfo">
+                    <TextView style="@style/PickupName" android:text="Mary Adeyemi" />
+                    <TextView style="@style/PickupDetail" android:text="Aunt · No face photos yet" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btnEnrolGuardian3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@string/guardian_enrol"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brand_blue" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Add guardian (dashed) -->
+        <FrameLayout
+            android:id="@+id/btnAddGuardian"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_dashed"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_add"
+                android:drawablePadding="10dp"
+                app:drawableTint="@color/brand_blue"
+                android:text="@string/child_add_guardian"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/brand_blue" />
+        </FrameLayout>
+
+        <!-- This week -->
+        <TextView
+            style="@style/SectionTitle"
+            android:layout_marginTop="28dp"
+            android:text="@string/child_this_week" />
+
+        <LinearLayout
+            android:id="@+id/weekList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_white">
+
+            <LinearLayout style="@style/WeekRow">
+                <TextView style="@style/WeekDay" android:text="Today" />
+                <TextView style="@style/WeekGuardian" android:text=" · Daniel" />
+                <TextView style="@style/WeekStatus.Verified" />
+            </LinearLayout>
+
+            <View style="@style/ListDivider" />
+
+            <LinearLayout style="@style/WeekRow">
+                <TextView style="@style/WeekDay" android:text="Fri" />
+                <TextView style="@style/WeekGuardian" android:text=" · Grace" />
+                <TextView style="@style/WeekStatus.Verified" />
+            </LinearLayout>
+
+            <View style="@style/ListDivider" />
+
+            <LinearLayout style="@style/WeekRow">
+                <TextView style="@style/WeekDay" android:text="Thu" />
+                <TextView style="@style/WeekGuardian" android:text=" · Mary" />
+                <TextView style="@style/WeekStatus.Override" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

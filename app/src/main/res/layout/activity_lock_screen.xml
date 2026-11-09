@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F3EF"
+    tools:context=".LockScreen">
+
+    <View
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvTitle"
+        android:layout_marginBottom="16dp"
+        android:background="@color/grey"
+
+        />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/staffSigninText"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1A2233"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvSubTitle" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lockScreenInstructionText"
+        android:textSize="18sp"
+        android:textColor="@color/grey"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/pinDots"
+        />
+
+    <!-- PIN dots row -->
+    <LinearLayout
+        android:id="@+id/pinDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/keypad">
+
+        <View android:id="@+id/dot1" style="@style/PinDot" />
+        <View android:id="@+id/dot2" style="@style/PinDot" />
+        <View android:id="@+id/dot3" style="@style/PinDot" />
+        <View android:id="@+id/dot4" style="@style/PinDot" />
+    </LinearLayout>
+
+    <!-- Keypad -->
+    <GridLayout
+        android:id="@+id/keypad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:padding="12dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView android:id="@+id/key1" style="@style/KeypadKey" android:text="1" />
+        <TextView android:id="@+id/key2" style="@style/KeypadKey" android:text="2" />
+        <TextView android:id="@+id/key3" style="@style/KeypadKey" android:text="3" />
+
+        <TextView android:id="@+id/key4" style="@style/KeypadKey" android:text="4" />
+        <TextView android:id="@+id/key5" style="@style/KeypadKey" android:text="5" />
+        <TextView android:id="@+id/key6" style="@style/KeypadKey" android:text="6" />
+
+        <TextView android:id="@+id/key7" style="@style/KeypadKey" android:text="7" />
+        <TextView android:id="@+id/key8" style="@style/KeypadKey" android:text="8" />
+        <TextView android:id="@+id/key9" style="@style/KeypadKey" android:text="9" />
+
+        <Space
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="8dp"
+            android:layout_columnWeight="1" />
+
+        <TextView android:id="@+id/key0" style="@style/KeypadKey" android:text="0" />
+
+        <ImageButton
+            android:id="@+id/keyBackspace"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="8dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:padding="28dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/outline_backspace_24"
+            app:tint="#1A2233"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete" />
+    </GridLayout>
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/outline_lock_24"
+            app:tint="#6B7280"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="@string/lock_screen_footer_text"
+            android:textColor="#6B7280"
+            android:textSize="14sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

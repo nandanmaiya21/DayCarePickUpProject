@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Home tab (View layer).
+    Names, numbers and times are sample data; the controller
+    will replace them at runtime using the view IDs.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:fillViewport="true"
+    tools:context=".Fragments.HomeFragment"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvStaffInitials"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:background="@drawable/bg_avatar_orange"
+                android:text="PS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_signed_in_role"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi, Priya"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnSignOut"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:padding="14dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/bg_icon_button"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_logout"
+                android:scaleX="-1"
+                app:tint="@color/text_primary"
+                android:contentDescription="@string/home_sign_out" />
+        </LinearLayout>
+
+        <!-- Verify hero card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/bg_hero_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_hero_icon"
+                    android:src="@drawable/ic_face_scan"
+                    app:tint="@color/white"
+                    android:importantForAccessibility="no" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvOfflineReady"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pill_translucent"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/home_offline_ready"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/home_verify_title"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/home_verify_subtitle"
+                android:textSize="16sp"
+                android:textColor="@color/hero_subtitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartFaceScan"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="20dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/home_start_face_scan"
+                android:textAllCaps="false"
+                android:letterSpacing="0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/brand_blue"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="20dp"
+                app:rippleColor="#1F1E4FC2" />
+        </LinearLayout>
+
+        <!-- Stats row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/HomeStatCard">
+                <TextView
+                    android:id="@+id/tvPickedUpCount"
+                    style="@style/HomeStatNumber"
+                    android:text="14" />
+                <TextView
+                    style="@style/HomeStatLabel"
+                    android:text="@string/home_stat_picked_up" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/HomeStatCard"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp">
+                <TextView
+                    android:id="@+id/tvStillHereCount"
+                    style="@style/HomeStatNumber"
+                    android:text="18" />
+                <TextView
+                    style="@style/HomeStatLabel"
+                    android:text="@string/home_stat_still_here" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/HomeStatCard">
+                <TextView
+                    android:id="@+id/tvOverridesCount"
+                    style="@style/HomeStatNumber"
+                    android:text="1"
+                    android:textColor="@color/status_override_text" />
+                <TextView
+                    style="@style/HomeStatLabel"
+                    android:text="@string/home_stat_overrides" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Quick actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnEnrolGuardian"
+                style="@style/HomeActionCard"
+                android:layout_marginEnd="8dp"
+                android:drawableStart="@drawable/ic_person_add_outline"
+                android:text="@string/home_enrol_guardian" />
+
+            <TextView
+                android:id="@+id/btnAddChild"
+                style="@style/HomeActionCard"
+                android:layout_marginStart="8dp"
+                android:drawableStart="@drawable/ic_person_outline"
+                android:text="@string/home_add_child" />
+        </LinearLayout>
+
+        <!-- Recent pick-ups header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home_recent_pickups"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/btnSeeLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:background="?attr/selectableItemBackground"
+                android:text="@string/home_see_log"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/brand_blue" />
+        </LinearLayout>
+
+        <!-- Recent pick-ups list -->
+        <LinearLayout
+            android:id="@+id/recentPickupsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_white">
+
+            <!-- Row 1 -->
+            <LinearLayout style="@style/PickupRow">
+                <TextView style="@style/PickupAvatar" android:text="AO" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+                    <TextView style="@style/PickupName" android:text="Ava Okafor" />
+                    <TextView style="@style/PickupDetail" android:text="Daniel Okafor · 3:42 PM" />
+                </LinearLayout>
+                <TextView style="@style/StatusBadge.Verified" />
+            </LinearLayout>
+
+            <View style="@style/ListDivider" />
+
+            <!-- Row 2 -->
+            <LinearLayout style="@style/PickupRow">
+                <TextView style="@style/PickupAvatar" android:text="LM" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+                    <TextView style="@style/PickupName" android:text="Leo Martin" />
+                    <TextView style="@style/PickupDetail" android:text="Sophie Martin · 3:31 PM" />
+                </LinearLayout>
+                <TextView style="@style/StatusBadge.Verified" />
+            </LinearLayout>
+
+            <View style="@style/ListDivider" />
+
+            <!-- Row 3 -->
+            <LinearLayout style="@style/PickupRow">
+                <TextView style="@style/PickupAvatar" android:text="ZK" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+                    <TextView style="@style/PickupName" android:text="Zara Khan" />
+                    <TextView style="@style/PickupDetail" android:text="Imran Khan · 3:18 PM" />
+                </LinearLayout>
+                <TextView style="@style/StatusBadge.Override" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

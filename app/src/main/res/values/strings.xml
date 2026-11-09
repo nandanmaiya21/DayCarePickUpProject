@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">DayCarePickUpProject</string>
+    <string name="lock_screen_footer_text">Works offline · Face data never leaves this device</string>
+    <string name="staffSigninText">Staff sign-in</string>
+    <string name="lockScreenInstructionText">Enter your 4-digit PIN</string>
+
+    <!-- Home screen -->
+    <string name="home_signed_in_role">Signed in · Front desk</string>
+    <string name="home_sign_out">Sign out</string>
+    <string name="home_offline_ready">Offline ready</string>
+    <string name="home_verify_title">Verify a pick-up</string>
+    <string name="home_verify_subtitle">One photo + a blink. Takes under a second.</string>
+    <string name="home_start_face_scan">Start face scan</string>
+    <string name="home_stat_picked_up">Picked up</string>
+    <string name="home_stat_still_here">Still here</string>
+    <string name="home_stat_overrides">Overrides</string>
+    <string name="home_enrol_guardian">Enrol guardian</string>
+    <string name="home_add_child">Add child</string>
+    <string name="home_recent_pickups">Recent pick-ups</string>
+    <string name="home_see_log">See log</string>
+    <string name="status_verified">Verified</string>
+    <string name="status_override">Override</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_verify">Verify</string>
+    <string name="nav_children">Children</string>
+    <string name="nav_log">Log</string>
+
+    <!-- Child profile -->
+    <string name="action_back">Back</string>
+    <string name="action_edit">Edit</string>
+    <string name="child_authorized_guardians">Authorized guardians</string>
+    <string name="child_add_guardian">Add guardian</string>
+    <string name="child_this_week">This week</string>
+    <string name="guardian_enrolled">Enrolled</string>
+    <string name="guardian_enrol">Enrol</string>
+
+    <!-- Pick-up log -->
+    <string name="log_title">Pick-up log</string>
+    <string name="log_search_hint">Search child or guardian</string>
+    <string name="log_today">Today</string>
+    <string name="log_yesterday">Yesterday</string>
+    <string name="log_pick_date">Pick date</string>
+    <string name="log_tab_all">All %1$d</string>
+    <string name="log_tab_verified">Verified %1$d</string>
+    <string name="log_tab_override">Override %1$d</string>
+    <string name="log_tab_rejected">Rejected %1$d</string>
+    <string name="status_rejected">Rejected</string>
+</resources>
