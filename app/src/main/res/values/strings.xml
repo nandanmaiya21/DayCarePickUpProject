@@ -45,4 +45,5 @@
     <string name="log_tab_override">Override %1$d</string>
     <string name="log_tab_rejected">Rejected %1$d</string>
     <string name="status_rejected">Rejected</string>
+    <string name="lock_wrong_pin">Wrong PIN. Try again.</string>
 </resources>

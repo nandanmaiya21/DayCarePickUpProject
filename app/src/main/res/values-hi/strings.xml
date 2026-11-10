@@ -46,4 +46,5 @@
     <string name="log_tab_override">ओवरराइड %1$d</string>
     <string name="log_tab_rejected">अस्वीकृत %1$d</string>
     <string name="status_rejected">अस्वीकृत</string>
+    <string name="lock_wrong_pin">गलत पिन। फिर से प्रयास करें।</string>
 </resources>
