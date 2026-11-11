@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DayCarePickUpProject</string>
+    <string name="lock_screen_footer_text">অফলাইনে কাজ করে · মুখের ডেটা ডিভাইস থেকে কখনো বাইরে যায় না</string>
+    <string name="staffSigninText">স্টাফ সাইন-ইন</string>
+    <string name="lockScreenInstructionText">আপনার ৪-সংখ্যার পিন (PIN) লিখুন</string>
+
+    <!-- Home screen -->
+    <string name="home_signed_in_role">সাইন ইন করা আছে · ফ্রন্ট ডেস্ক</string>
+    <string name="home_sign_out">সাইন আউট</string>
+    <string name="home_offline_ready">অফলাইন প্রস্তুত</string>
+    <string name="home_verify_title">পিক-আপ যাচাই করুন</string>
+    <string name="home_verify_subtitle">একটি ছবি + চোখের পলক। এক সেকেন্ডের কম সময় নেয়।</string>
+    <string name="home_start_face_scan">ফেস স্ক্যান শুরু করুন</string>
+    <string name="home_stat_picked_up">নিয়ে যাওয়া হয়েছে</string>
+    <string name="home_stat_still_here">এখানেই আছে</string>
+    <string name="home_stat_overrides">ওভাররাইড</string>
+    <string name="home_enrol_guardian">অভিভাবককে নথিভুক্ত করুন</string>
+    <string name="home_add_child">শিশু যোগ করুন</string>
+    <string name="home_recent_pickups">সাম্প্রতিক পিক-আপসমূহ</string>
+    <string name="home_see_log">লগ দেখুন</string>
+    <string name="status_verified">যাচাইকৃত</string>
+    <string name="status_override">ওভাররাইড</string>
+    <string name="nav_home">হোম</string>
+    <string name="nav_verify">যাচাই</string>
+    <string name="nav_children">শিশুরা</string>
+    <string name="nav_log">লগ</string>
+
+    <!-- Child profile -->
+    <string name="action_back">পেছনে</string>
+    <string name="action_edit">সম্পাদনা</string>
+    <string name="child_authorized_guardians">অনুমোদিত অভিভাবকগণ</string>
+    <string name="child_add_guardian">অভিভাবক যোগ করুন</string>
+    <string name="child_this_week">এই সপ্তাহ</string>
+    <string name="guardian_enrolled">নথিভুক্ত</string>
+    <string name="guardian_enrol">নথিভুক্ত করুন</string>
+
+    <!-- Pick-up log -->
+    <string name="log_title">পিক-আপ লগ</string>
+    <string name="log_search_hint">শিশু বা অভিভাবক খুঁজুন</string>
+    <string name="log_today">আজ</string>
+    <string name="log_yesterday">গতকাল</string>
+    <string name="log_pick_date">তারিখ বাছুন</string>
+    <string name="log_tab_all">সব কয়টি %1$d</string>
+    <string name="log_tab_verified">যাচাইকৃত %1$d</string>
+    <string name="log_tab_override">ওভাররাইড %1$d</string>
+    <string name="log_tab_rejected">প্রত্যাখ্যাত %1$d</string>
+    <string name="status_rejected">প্রত্যাখ্যাত</string>
+    <string name="lock_wrong_pin">ভুল পিন। আবার চেষ্টা করুন।</string>
+</resources>
