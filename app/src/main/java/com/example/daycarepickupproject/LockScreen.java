@@ -3,10 +3,14 @@ package com.example.daycarepickupproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridLayout;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -26,14 +30,40 @@ public class LockScreen extends AppCompatActivity {
 
     private View[] dots;
     private TextView tvSubTitle;
-    private View pinDotsRow;
+
+    private ConstraintLayout main;
+    private TextView tvTitle;
+    private LinearLayout pinDotsRow, footer;
+    private View dot1, dot2, dot3, dot4;
+    private GridLayout keypad;
+    private TextView[] digitKeys;
+    private ImageButton keyBackspace;
+
+    private void bindViews() {
+        main = findViewById(R.id.main);
+        tvTitle = findViewById(R.id.tvTitle);
+        tvSubTitle = findViewById(R.id.tvSubTitle);
+        pinDotsRow = findViewById(R.id.pinDots);
+        dot1 = findViewById(R.id.dot1);
+        dot2 = findViewById(R.id.dot2);
+        dot3 = findViewById(R.id.dot3);
+        dot4 = findViewById(R.id.dot4);
+        dots = new View[]{dot1, dot2, dot3, dot4};
+        keypad = findViewById(R.id.keypad);
+        digitKeys = new TextView[DIGIT_IDS.length];
+        for (int i = 0; i < DIGIT_IDS.length; i++) {
+            digitKeys[i] = findViewById(DIGIT_IDS[i]);
+        }
+        keyBackspace = findViewById(R.id.keyBackspace);
+        footer = findViewById(R.id.footer);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_lock_screen);
-
+        bindViews();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
