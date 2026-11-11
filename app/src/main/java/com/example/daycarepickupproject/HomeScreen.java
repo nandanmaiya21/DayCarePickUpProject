@@ -1,5 +1,6 @@
 package com.example.daycarepickupproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -46,8 +47,10 @@ public class HomeScreen extends AppCompatActivity {
                 showFragment(new LogFragment());
                 return true;
             }
-            // Verify tab doesn't have a fragment yet
-            return false;
+            if (id == R.id.nav_verify) {
+                startActivity(new Intent(this, VerifyScreen.class));
+            }
+            return false; // keep the previously selected tab highlighted
         });
 
         // First launch: show the Home tab (skip on rotation, the fragment is restored)
