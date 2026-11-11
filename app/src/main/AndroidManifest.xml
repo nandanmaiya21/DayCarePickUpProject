@@ -36,6 +36,10 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".AddChildScreen"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".VerifyScreen"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

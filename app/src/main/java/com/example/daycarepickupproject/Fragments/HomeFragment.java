@@ -6,12 +6,16 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.daycarepickupproject.EnrollmentScreen;
+import com.example.daycarepickupproject.LockScreen;
 import com.example.daycarepickupproject.R;
+import com.example.daycarepickupproject.VerifyScreen;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
 
@@ -43,6 +47,7 @@ public class HomeFragment extends Fragment {
         btnSeeLog = view.findViewById(R.id.btnSeeLog);
         recentPickupsList = view.findViewById(R.id.recentPickupsList);
     }
+
 
     public HomeFragment() {
         super(R.layout.fragment_home);

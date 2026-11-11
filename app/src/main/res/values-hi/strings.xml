@@ -47,4 +47,33 @@
     <string name="log_tab_rejected">अस्वीकृत %1$d</string>
     <string name="status_rejected">अस्वीकृत</string>
     <string name="lock_wrong_pin">गलत पिन। फिर से प्रयास करें।</string>
+
+    <!-- Enrollment -->
+    <string name="enrol_title_guardian">अभिभावक का नामांकन करें</string>
+    <string name="enrol_title_child">बच्चा जोड़ें</string>
+    <string name="enrol_child_placeholder">बच्चे का फॉर्म आगे आएगा।</string>
+    <string name="enrol_full_name">पूरा नाम</string>
+    <string name="enrol_full_name_hint">उदा. डैनियल ओकाफोर</string>
+    <string name="enrol_relationship">बच्चे से संबंध</string>
+    <string name="enrol_phone">फ़ोन नंबर</string>
+    <string name="enrol_phone_hint">उदा. 519 555 0123</string>
+    <string name="enrol_children">लेने के लिए अधिकृत</string>
+    <string name="enrol_children_hint">एक या अधिक बच्चों का चयन करें</string>
+    <string name="enrol_face_photos">चेहरे की तस्वीरें</string>
+    <string name="enrol_face_photos_hint">3 से 5 स्पष्ट तस्वीरें मिलान को अधिक विश्वसनीय बनाती हैं। आप इन्हें बाद में भी जोड़ सकते हैं।</string>
+    <string name="enrol_photos_count">%1$d / %2$d तस्वीरें</string>
+    <string name="enrol_take_photos">चेहरे की तस्वीरें लें</string>
+    <string name="enrol_photos_coming">कैमरा कैप्चर आगे जोड़ा जाएगा।</string>
+    <string name="enrol_consent">अभिभावक इस बात से सहमत हैं कि पिक-अप जांच के लिए उनके चेहरे का डेटा इस डिवाइस पर संग्रहीत किया जाएगा।</string>
+    <string name="enrol_save_guardian">अभिभावक सहेजें</string>
+    <string name="enrol_saved">अभिभावक का विवरण कैप्चर किया गया (स्टोरेज में सहेजना बाद में आएगा)।</string>
+    <string name="enrol_error_name">अभिभावक का पूरा नाम दर्ज करें</string>
+    <string name="enrol_error_relationship">संबंध चुनें</string>
+    <string name="enrol_error_children">कम से कम एक बच्चे का चयन करें</string>
+    <string name="enrol_error_consent">जारी रखने के लिए सहमति आवश्यक है</string>
+    <string name="rel_father">पिता</string>
+    <string name="rel_mother">माता</string>
+    <string name="rel_grandparent">दादा-दादी / नाना-नानी</string>
+    <string name="rel_relative">मौसी/चाची / मामा/चाचा</string>
+    <string name="rel_other">अन्य</string>
 </resources>

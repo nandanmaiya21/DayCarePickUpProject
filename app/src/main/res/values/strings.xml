@@ -46,4 +46,33 @@
     <string name="log_tab_rejected">Rejected %1$d</string>
     <string name="status_rejected">Rejected</string>
     <string name="lock_wrong_pin">Wrong PIN. Try again.</string>
+
+    <!-- Enrollment -->
+    <string name="enrol_title_guardian">Enrol guardian</string>
+    <string name="enrol_title_child">Add child</string>
+    <string name="enrol_child_placeholder">The child form is coming next.</string>
+    <string name="enrol_full_name">Full name</string>
+    <string name="enrol_full_name_hint">e.g. Daniel Okafor</string>
+    <string name="enrol_relationship">Relationship to child</string>
+    <string name="enrol_phone">Phone number</string>
+    <string name="enrol_phone_hint">e.g. 519 555 0123</string>
+    <string name="enrol_children">Authorized to pick up</string>
+    <string name="enrol_children_hint">Select one or more children</string>
+    <string name="enrol_face_photos">Face photos</string>
+    <string name="enrol_face_photos_hint">3 to 5 clear photos make matching more reliable. You can also add them later.</string>
+    <string name="enrol_photos_count">%1$d of %2$d photos</string>
+    <string name="enrol_take_photos">Take face photos</string>
+    <string name="enrol_photos_coming">Camera capture will be added next.</string>
+    <string name="enrol_consent">The guardian agrees to their face data being stored on this device for pick-up checks.</string>
+    <string name="enrol_save_guardian">Save guardian</string>
+    <string name="enrol_saved">Guardian details captured (saving to storage comes later).</string>
+    <string name="enrol_error_name">Enter the guardian\'s full name</string>
+    <string name="enrol_error_relationship">Choose a relationship</string>
+    <string name="enrol_error_children">Select at least one child</string>
+    <string name="enrol_error_consent">Consent is required to continue</string>
+    <string name="rel_father">Father</string>
+    <string name="rel_mother">Mother</string>
+    <string name="rel_grandparent">Grandparent</string>
+    <string name="rel_relative">Aunt / Uncle</string>
+    <string name="rel_other">Other</string>
 </resources>
