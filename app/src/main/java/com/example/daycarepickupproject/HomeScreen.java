@@ -6,10 +6,12 @@ import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentContainerView;
 
 import com.example.daycarepickupproject.Fragments.ChildrenFragment;
 import com.example.daycarepickupproject.Fragments.HomeFragment;
@@ -21,12 +23,22 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
  */
 public class HomeScreen extends AppCompatActivity {
 
+    private ConstraintLayout main;
+    private FragmentContainerView fragmentContainer;
+    private BottomNavigationView bottomNav;
+
+    private void bindViews() {
+        main = findViewById(R.id.main);
+        fragmentContainer = findViewById(R.id.fragmentContainer);
+        bottomNav = findViewById(R.id.bottomNav);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home_screen);
-
+        bindViews();
         View root = findViewById(R.id.main);
         ViewCompat.setOnApplyWindowInsetsListener(root, (v, insets) -> {
             Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

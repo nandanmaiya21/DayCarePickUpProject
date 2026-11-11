@@ -6,6 +6,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
@@ -32,9 +35,23 @@ public class LogFragment extends Fragment {
 
     private TextView chipToday;
     private TextView chipYesterday;
-    private TextView chipPickDate;
-    private TextView tvDateHeader;
+
+    private ScrollView logScroll;
     private EditText etSearch;
+    private TextView chipPickDate, tvDateHeader;
+    private TabLayout statusTabs;
+    private LinearLayout logList;
+
+    private void bindViews(View view) {
+        logScroll = view.findViewById(R.id.logScroll);
+        etSearch = view.findViewById(R.id.etSearch);
+        chipToday = view.findViewById(R.id.chipToday);
+        chipYesterday = view.findViewById(R.id.chipYesterday);
+        chipPickDate = view.findViewById(R.id.chipPickDate);
+        statusTabs = view.findViewById(R.id.statusTabs);
+        tvDateHeader = view.findViewById(R.id.tvDateHeader);
+        logList = view.findViewById(R.id.logList);
+    }
 
     public LogFragment() {
         super(R.layout.fragment_log);
@@ -43,7 +60,7 @@ public class LogFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        bindViews(view);
         // Status tabs. Counts are sample values until the log model exists.
         TabLayout tabs = view.findViewById(R.id.statusTabs);
         tabs.addTab(tabs.newTab().setText(getString(R.string.log_tab_all, 15)));

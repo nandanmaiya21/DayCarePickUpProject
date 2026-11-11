@@ -1,11 +1,12 @@
 package com.example.daycarepickupproject.Fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,27 +24,16 @@ import com.google.android.material.button.MaterialButton;
  */
 public class HomeFragment extends Fragment {
 
-    private TextView tvStaffInitials;
-    private TextView tvGreeting;
+    private ScrollView homeScroll;
+    private TextView tvStaffInitials, tvGreeting, tvOfflineReady;
     private ImageButton btnSignOut;
-    private TextView tvOfflineReady;
     private MaterialButton btnStartFaceScan;
-    private TextView tvPickedUpCount;
-    private TextView tvStillHereCount;
-    private TextView tvOverridesCount;
-    private TextView btnEnrolGuardian;
-    private TextView btnAddChild;
-    private TextView btnSeeLog;
+    private TextView tvPickedUpCount, tvStillHereCount, tvOverridesCount;
+    private TextView btnEnrolGuardian, btnAddChild, btnSeeLog;
     private LinearLayout recentPickupsList;
 
-    public HomeFragment() {
-        super(R.layout.fragment_home);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
+    private void bindViews(View view) {
+        homeScroll = view.findViewById(R.id.homeScroll);
         tvStaffInitials = view.findViewById(R.id.tvStaffInitials);
         tvGreeting = view.findViewById(R.id.tvGreeting);
         btnSignOut = view.findViewById(R.id.btnSignOut);
@@ -56,33 +46,21 @@ public class HomeFragment extends Fragment {
         btnAddChild = view.findViewById(R.id.btnAddChild);
         btnSeeLog = view.findViewById(R.id.btnSeeLog);
         recentPickupsList = view.findViewById(R.id.recentPickupsList);
+    }
 
+
+    public HomeFragment() {
+        super(R.layout.fragment_home);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        bindViews(view);
         // "See log" opens the Log tab
-        btnSeeLog.setOnClickListener(v -> {
+        view.findViewById(R.id.btnSeeLog).setOnClickListener(v -> {
             BottomNavigationView nav = requireActivity().findViewById(R.id.bottomNav);
             nav.setSelectedItemId(R.id.nav_log);
         });
-
-        // Sign out: back to the lock screen; Back must not return to Home
-        btnSignOut.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), LockScreen.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-        });
-
-        btnStartFaceScan.setOnClickListener(v ->
-                startActivity(new Intent(requireContext(), VerifyScreen.class)));
-
-        // "Enrol guardian" and "Add child" both open the enrollment screen
-        btnEnrolGuardian.setOnClickListener(v ->
-                openEnrollment(EnrollmentScreen.MODE_GUARDIAN));
-        btnAddChild.setOnClickListener(v ->
-                openEnrollment(EnrollmentScreen.MODE_CHILD));
-    }
-
-    private void openEnrollment(String mode) {
-        Intent intent = new Intent(requireContext(), EnrollmentScreen.class);
-        intent.putExtra(EnrollmentScreen.EXTRA_MODE, mode);
-        startActivity(intent);
     }
 }
