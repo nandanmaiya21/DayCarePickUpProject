@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.daycarepickupproject.EnrollmentScreen;
+import com.example.daycarepickupproject.AddChildScreen;
 import com.example.daycarepickupproject.LockScreen;
 import com.example.daycarepickupproject.R;
 import com.example.daycarepickupproject.VerifyScreen;
@@ -76,6 +77,7 @@ public class HomeFragment extends Fragment {
         btnEnrolGuardian.setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), EnrollmentScreen.class)));
 
-        // btnAddChild: no screen exists yet, so it is only connected for now
+        btnAddChild.setOnClickListener(v ->
+                startActivity(new Intent(requireContext(), AddChildScreen.class)));
     }
 }
