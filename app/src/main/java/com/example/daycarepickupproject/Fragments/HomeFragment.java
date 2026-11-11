@@ -12,7 +12,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.daycarepickupproject.EnrollmentScreen;
-import com.example.daycarepickupproject.AddChildScreen;
 import com.example.daycarepickupproject.LockScreen;
 import com.example.daycarepickupproject.R;
 import com.example.daycarepickupproject.VerifyScreen;
@@ -74,10 +73,16 @@ public class HomeFragment extends Fragment {
         btnStartFaceScan.setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), VerifyScreen.class)));
 
+        // "Enrol guardian" and "Add child" both open the enrollment screen
         btnEnrolGuardian.setOnClickListener(v ->
-                startActivity(new Intent(requireContext(), EnrollmentScreen.class)));
-
+                openEnrollment(EnrollmentScreen.MODE_GUARDIAN));
         btnAddChild.setOnClickListener(v ->
-                startActivity(new Intent(requireContext(), AddChildScreen.class)));
+                openEnrollment(EnrollmentScreen.MODE_CHILD));
+    }
+
+    private void openEnrollment(String mode) {
+        Intent intent = new Intent(requireContext(), EnrollmentScreen.class);
+        intent.putExtra(EnrollmentScreen.EXTRA_MODE, mode);
+        startActivity(intent);
     }
 }
