@@ -47,4 +47,33 @@
     <string name="log_tab_rejected">প্রত্যাখ্যাত %1$d</string>
     <string name="status_rejected">প্রত্যাখ্যাত</string>
     <string name="lock_wrong_pin">ভুল পিন। আবার চেষ্টা করুন।</string>
+
+    <!-- Enrollment -->
+    <string name="enrol_title_guardian">অভিভাবকের নিবন্ধন করুন</string>
+    <string name="enrol_title_child">শিশু যোগ করুন</string>
+    <string name="enrol_child_placeholder">শিশুর ফর্মটি পরবর্তীতে আসবে।</string>
+    <string name="enrol_full_name">পুরো নাম</string>
+    <string name="enrol_full_name_hint">উদা. ড্যানিয়েল ওকাফর</string>
+    <string name="enrol_relationship">শিশুর সাথে সম্পর্ক</string>
+    <string name="enrol_phone">ফোন নম্বর</string>
+    <string name="enrol_phone_hint">উদা. 519 555 0123</string>
+    <string name="enrol_children">নিতে অনুমোদিত</string>
+    <string name="enrol_children_hint">এক বা একাধিক শিশু নির্বাচন করুন</string>
+    <string name="enrol_face_photos">মুখের ছবি</string>
+    <string name="enrol_face_photos_hint">৩ থেকে ৫টি স্পষ্ট ছবি মেলানোর কাজটিকে আরও নির্ভরযোগ্য করে তোলে। আপনি পরে এগুলো যোগ করতে পারেন।</string>
+    <string name="enrol_photos_count">%2$dটির মধ্যে %1$dটি ছবি</string>
+    <string name="enrol_take_photos">মুখের ছবি তুলুন</string>
+    <string name="enrol_photos_coming">ক্যামেরা ক্যাপচার পরবর্তীতে যোগ করা হবে।</string>
+    <string name="enrol_consent">পিক-আপ যাচাইয়ের জন্য অভিভাবক তাদের মুখের ডেটা এই ডিভাইসে সংরক্ষণ করতে সম্মত হচ্ছেন।</string>
+    <string name="enrol_save_guardian">অভিভাবক সংরক্ষণ করুন</string>
+    <string name="enrol_saved">অভিভাবকের বিবরণ ক্যাপচার করা হয়েছে (স্টোরেজে সংরক্ষণ পরবর্তীতে আসবে)।</string>
+    <string name="enrol_error_name">অভিভাবকের পুরো নাম লিখুন</string>
+    <string name="enrol_error_relationship">একটি সম্পর্ক চয়ন করুন</string>
+    <string name="enrol_error_children">অন্তত একটি শিশু নির্বাচন করুন</string>
+    <string name="enrol_error_consent">চালিয়ে যেতে সম্মতি প্রয়োজন</string>
+    <string name="rel_father">বাবা</string>
+    <string name="rel_mother">মা</string>
+    <string name="rel_grandparent">দাদা-দাদি / নানা-নানি</string>
+    <string name="rel_relative">মাসি/পিসি / মামা/চাচা</string>
+    <string name="rel_other">অন্যান্য</string>
 </resources>
