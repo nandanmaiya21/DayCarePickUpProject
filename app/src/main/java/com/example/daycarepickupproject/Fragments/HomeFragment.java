@@ -1,19 +1,18 @@
 package com.example.daycarepickupproject.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.daycarepickupproject.EnrollmentScreen;
-import com.example.daycarepickupproject.LockScreen;
 import com.example.daycarepickupproject.R;
 import com.example.daycarepickupproject.VerifyScreen;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -48,7 +47,6 @@ public class HomeFragment extends Fragment {
         recentPickupsList = view.findViewById(R.id.recentPickupsList);
     }
 
-
     public HomeFragment() {
         super(R.layout.fragment_home);
     }
@@ -57,10 +55,29 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         bindViews(view);
+
         // "See log" opens the Log tab
-        view.findViewById(R.id.btnSeeLog).setOnClickListener(v -> {
+        btnSeeLog.setOnClickListener(v -> {
             BottomNavigationView nav = requireActivity().findViewById(R.id.bottomNav);
             nav.setSelectedItemId(R.id.nav_log);
         });
+
+        // "Enrol guardian" and "Add child" both open the enrollment screen
+        btnEnrolGuardian.setOnClickListener(v ->
+                openEnrollment(EnrollmentScreen.MODE_GUARDIAN));
+        btnAddChild.setOnClickListener(v ->
+                openEnrollment(EnrollmentScreen.MODE_CHILD));
+
+        // "Start face scan" opens the Verify screen
+        btnStartFaceScan.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), VerifyScreen.class);
+            startActivity(intent);
+        });
+    }
+
+    private void openEnrollment(String mode) {
+        Intent intent = new Intent(requireContext(), EnrollmentScreen.class);
+        intent.putExtra(EnrollmentScreen.EXTRA_MODE, mode);
+        startActivity(intent);
     }
 }
