@@ -1,20 +1,30 @@
 package com.example.daycarepickupproject
 
+
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.OnApplyWindowInsetsListener
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+/**
+ * Verification screen where the person picking up is photographed and checked.
+ */
 class VerifyScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        this.enableEdgeToEdge()
         setContentView(R.layout.activity_verify_screen)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        val root = findViewById<View?>(R.id.main)
+        ViewCompat.setOnApplyWindowInsetsListener(
+            root,
+            OnApplyWindowInsetsListener { v: View?, insets: WindowInsetsCompat? ->
+                val bars = insets!!.getInsets(WindowInsetsCompat.Type.systemBars())
+                v!!.setPadding(bars.left, bars.top, bars.right, bars.bottom)
+                insets
+            })
     }
 }
