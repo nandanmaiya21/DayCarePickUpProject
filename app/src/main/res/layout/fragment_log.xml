@@ -126,59 +126,12 @@
             android:layout_marginTop="14dp"
             android:orientation="vertical"
             android:background="@drawable/bg_card_white">
-
-            <LinearLayout style="@style/PickupRow">
-                <TextView style="@style/LogTime" android:text="3:42 PM" />
-                <LinearLayout style="@style/LogInfo">
-                    <TextView style="@style/PickupName" android:text="Ava Okafor" />
-                    <TextView style="@style/PickupDetail" android:text="Daniel Okafor · 97.8%" />
-                </LinearLayout>
-                <TextView style="@style/StatusBadge.Verified" />
-            </LinearLayout>
-
-            <View style="@style/ListDivider" />
-
-            <LinearLayout style="@style/PickupRow">
-                <TextView style="@style/LogTime" android:text="3:31 PM" />
-                <LinearLayout style="@style/LogInfo">
-                    <TextView style="@style/PickupName" android:text="Leo Martin" />
-                    <TextView style="@style/PickupDetail" android:text="Sophie Martin · 96.1%" />
-                </LinearLayout>
-                <TextView style="@style/StatusBadge.Verified" />
-            </LinearLayout>
-
-            <View style="@style/ListDivider" />
-
-            <LinearLayout style="@style/PickupRow">
-                <TextView style="@style/LogTime" android:text="3:18 PM" />
-                <LinearLayout style="@style/LogInfo">
-                    <TextView style="@style/PickupName" android:text="Zara Khan" />
-                    <TextView style="@style/PickupDetail" android:text="Imran Khan · by Priya S." />
-                </LinearLayout>
-                <TextView style="@style/StatusBadge.Override" />
-            </LinearLayout>
-
-            <View style="@style/ListDivider" />
-
-            <LinearLayout style="@style/PickupRow">
-                <TextView style="@style/LogTime" android:text="3:16 PM" />
-                <LinearLayout style="@style/LogInfo">
-                    <TextView style="@style/PickupName" android:text="Zara Khan" />
-                    <TextView style="@style/PickupDetail" android:text="Unknown face · 41%" />
-                </LinearLayout>
-                <TextView style="@style/StatusBadge.Rejected" />
-            </LinearLayout>
-
-            <View style="@style/ListDivider" />
-
-            <LinearLayout style="@style/PickupRow">
-                <TextView style="@style/LogTime" android:text="3:05 PM" />
-                <LinearLayout style="@style/LogInfo">
-                    <TextView style="@style/PickupName" android:text="Mia Chen" />
-                    <TextView style="@style/PickupDetail" android:text="Wei Chen · 98.4%" />
-                </LinearLayout>
-                <TextView style="@style/StatusBadge.Verified" />
-            </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            style="@style/EmptyText"
+            android:text="@string/log_empty"
+            android:visibility="gone" />
     </LinearLayout>
 </ScrollView>

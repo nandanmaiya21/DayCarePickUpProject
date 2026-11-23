@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One pick-up in the child's "This week" list -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WeekRow">
+    <TextView android:id="@+id/tvDay" style="@style/WeekDay" />
+    <TextView android:id="@+id/tvGuardian" style="@style/WeekGuardian" />
+    <TextView android:id="@+id/tvStatus" style="@style/WeekStatus.Verified" />
+</LinearLayout>

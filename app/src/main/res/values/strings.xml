@@ -46,4 +46,115 @@
     <string name="log_tab_rejected">Rejected %1$d</string>
     <string name="status_rejected">Rejected</string>
     <string name="lock_wrong_pin">Wrong PIN. Try again.</string>
+
+    <!-- Common -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_close">Close</string>
+    <string name="status_still_here">Still here</string>
+    <string name="unknown_face">Unknown face</string>
+    <string name="score_percent">%1$.1f%%</string>
+    <string name="detail_dot">%1$s · %2$s</string>
+    <string name="by_staff">by %1$s</string>
+    <string name="camera_permission_needed">Camera permission is needed to scan faces.</string>
+    <string name="camera_error">Could not start the camera.</string>
+    <string name="model_error">Could not load the face recognition model.</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Hi, %1$s</string>
+    <string name="home_no_pickups">No pick-ups yet today</string>
+
+    <!-- Children -->
+    <string name="children_title">Children</string>
+    <string name="children_search_hint">Search children</string>
+    <string name="children_empty">No children yet. Add a child to get started.</string>
+    <string name="child_room_age">%1$s · Age %2$d</string>
+    <string name="child_age_only">Age %1$d</string>
+    <string name="child_no_room">No room set</string>
+    <string name="child_guardian_count">%1$d guardians</string>
+    <string name="child_one_guardian">1 guardian</string>
+    <string name="child_no_guardians">No guardians enrolled</string>
+    <string name="child_picked_up_at">Picked up · %1$s</string>
+    <string name="child_no_pickups_week">No pick-ups in the last 7 days</string>
+    <string name="child_today">Today</string>
+    <string name="guardian_photos">%1$s · %2$d face photos</string>
+    <string name="guardian_remove_title">Remove %1$s?</string>
+    <string name="guardian_remove_message">Their face data will be deleted and they will no longer be able to pick up any child.</string>
+    <string name="child_dialog_add_title">Add child</string>
+    <string name="child_dialog_edit_title">Edit child</string>
+    <string name="child_name">Child\'s full name</string>
+    <string name="child_room">Room (optional)</string>
+    <string name="child_age">Age (optional)</string>
+    <string name="child_name_required">Enter the child\'s name</string>
+    <string name="child_delete_title">Delete %1$s?</string>
+    <string name="child_delete_message">The child and their guardian links will be removed. Past log entries are kept.</string>
+    <string name="child_added">%1$s added</string>
+
+    <!-- Enrolment -->
+    <string name="enrol_title">Enrol guardian</string>
+    <string name="enrol_subtitle">Details first, then %1$d–%2$d face photos.</string>
+    <string name="enrol_guardian_name">Guardian\'s full name</string>
+    <string name="enrol_relation">Relation (e.g. Father, Aunt)</string>
+    <string name="enrol_children_label">Children they can pick up</string>
+    <string name="enrol_no_children">No children yet. Add one below.</string>
+    <string name="enrol_next">Next: face photos</string>
+    <string name="enrol_name_required">Enter the guardian\'s name</string>
+    <string name="enrol_child_required">Pick at least one child</string>
+    <string name="enrol_progress">Photo %1$d of %2$d</string>
+    <string name="enrol_hint_start">Look at the camera. Photos are taken automatically.</string>
+    <string name="enrol_hint_move">Got it. Move your head slightly for the next photo.</string>
+    <string name="enrol_hint_done">All photos taken. Tap Save.</string>
+    <string name="enrol_hint_same_person">Keep the same person in the frame</string>
+    <string name="enrol_save">Save guardian</string>
+    <string name="enrol_need_more">Take at least %1$d photos</string>
+    <string name="enrol_saved">%1$s enrolled</string>
+    <string name="enrol_restart">Retake</string>
+
+    <!-- Face guidance -->
+    <string name="face_none">Position a face inside the oval</string>
+    <string name="face_multiple">Only one person in the frame, please</string>
+    <string name="face_too_far">Move closer to the camera</string>
+    <string name="face_not_facing">Look straight at the camera</string>
+    <string name="face_open_eyes">Keep your eyes open</string>
+
+    <!-- Verify -->
+    <string name="verify_title">Verify pick-up</string>
+    <string name="verify_loading">Getting ready…</string>
+    <string name="verify_blink">Now blink once</string>
+    <string name="verify_blink_sub">This checks it\'s a real person, not a photo.</string>
+    <string name="verify_checking">Checking…</string>
+    <string name="verify_no_guardians">No guardians are enrolled yet. Enrol a guardian first.</string>
+    <string name="verify_match_detail">%1$s match · checked in %2$d ms</string>
+    <string name="verify_select_children">Who is being picked up?</string>
+    <string name="verify_already_picked">%1$s · already picked up</string>
+    <string name="verify_confirm">Confirm pick-up</string>
+    <string name="verify_try_again">Try again</string>
+    <string name="verify_override">Staff override</string>
+    <string name="verify_not_recognised">Not recognised</string>
+    <string name="verify_not_recognised_detail">Best match %1$s. This attempt has been logged.</string>
+    <string name="verify_liveness_failed">No blink detected</string>
+    <string name="verify_liveness_failed_detail">Could not confirm a live person. This attempt has been logged.</string>
+    <string name="verify_no_children">This guardian isn\'t linked to any child.</string>
+    <string name="verify_all_picked">All their children have already been picked up today.</string>
+    <string name="verify_pick_child">Select at least one child</string>
+    <string name="verify_recorded">Pick-up recorded</string>
+    <string name="note_liveness_failed">No blink detected</string>
+    <string name="note_no_match">No matching guardian</string>
+
+    <!-- Override -->
+    <string name="override_title">Staff override</string>
+    <string name="override_message">Use only after checking the person\'s ID. This is logged under your name.</string>
+    <string name="override_pin">Your staff PIN</string>
+    <string name="override_child">Child</string>
+    <string name="override_person">Person picking up</string>
+    <string name="override_reason">Reason (e.g. ID checked, new guardian)</string>
+    <string name="override_confirm">Record override</string>
+    <string name="override_wrong_pin">Wrong PIN</string>
+    <string name="override_fill_all">Fill in every field</string>
+    <string name="override_no_children">Every child has already been picked up today.</string>
+
+    <!-- Log -->
+    <string name="log_empty">No pick-up attempts for this day</string>
 </resources>

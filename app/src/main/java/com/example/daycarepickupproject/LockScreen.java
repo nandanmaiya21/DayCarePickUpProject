@@ -12,7 +12,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.daycarepickupproject.Database.Repository;
+import com.example.daycarepickupproject.Models.PinHasher;
 import com.example.daycarepickupproject.Models.PinModel;
+import com.example.daycarepickupproject.Models.Session;
 
 
 public class LockScreen extends AppCompatActivity {
@@ -69,12 +72,16 @@ public class LockScreen extends AppCompatActivity {
     }
 
     private void checkPin() {
-        if (pinModel.isCorrect()) {
-            startActivity(new Intent(this, HomeScreen.class));
-            finish(); // so Back from Home doesn't return to the lock screen
-        } else {
-            showWrongPin();
-        }
+        String hash = PinHasher.hash(pinModel.getPin());
+        Repository.run(this, dao -> dao.findStaffByPinHash(hash), staff -> {
+            if (staff != null) {
+                Session.signIn(staff);
+                startActivity(new Intent(this, HomeScreen.class));
+                finish(); // so Back from Home doesn't return to the lock screen
+            } else {
+                showWrongPin();
+            }
+        });
     }
 
     private void updateDots() {

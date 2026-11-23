@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One row in the pick-up log -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/PickupRow">
+
+    <TextView android:id="@+id/tvTime" style="@style/LogTime" />
+
+    <LinearLayout style="@style/LogInfo">
+        <TextView android:id="@+id/tvName" style="@style/PickupName" />
+        <TextView android:id="@+id/tvDetail" style="@style/PickupDetail" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvBadge" style="@style/StatusBadge.Verified" />
+</LinearLayout>

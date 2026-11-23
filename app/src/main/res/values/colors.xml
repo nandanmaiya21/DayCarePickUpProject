@@ -32,4 +32,10 @@
     <!-- Pick-up log -->
     <color name="status_rejected_bg">#FDE2E2</color>
     <color name="status_rejected_text">#B42318</color>
+
+    <!-- Camera screens -->
+    <color name="camera_scrim">#B3101622</color>
+    <color name="guide_idle">#FFFFFF</color>
+    <color name="guide_ok">#34C77B</color>
+    <color name="guide_warn">#F5B841</color>
 </resources>

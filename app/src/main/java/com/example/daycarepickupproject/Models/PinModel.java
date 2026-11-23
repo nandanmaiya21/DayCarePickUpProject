@@ -8,9 +8,6 @@ public class PinModel {
 
     public static final int PIN_LENGTH = 4;
 
-    // Placeholder PIN until staff accounts are stored (e.g. in a database).
-    private static final String STAFF_PIN = "1234";
-
     private final StringBuilder enteredPin = new StringBuilder();
 
     /** Adds a digit. Returns false if the PIN is already full. */
@@ -40,7 +37,8 @@ public class PinModel {
         return enteredPin.length() == PIN_LENGTH;
     }
 
-    public boolean isCorrect() {
-        return STAFF_PIN.contentEquals(enteredPin);
+    /** The digits typed so far. The lock screen checks a complete PIN against the staff table. */
+    public String getPin() {
+        return enteredPin.toString();
     }
 }

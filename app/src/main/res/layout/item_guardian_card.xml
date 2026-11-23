@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One authorised guardian on the child profile. Tap to remove. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/GuardianCard"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView android:id="@+id/ivPhoto" style="@style/GuardianPhoto" />
+
+    <LinearLayout style="@style/GuardianInfo">
+        <TextView android:id="@+id/tvName" style="@style/PickupName" />
+        <TextView android:id="@+id/tvDetail" style="@style/PickupDetail" />
+    </LinearLayout>
+
+    <TextView style="@style/GuardianEnrolled" />
+</LinearLayout>

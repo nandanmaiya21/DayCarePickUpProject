@@ -261,55 +261,12 @@
             android:layout_marginTop="12dp"
             android:orientation="vertical"
             android:background="@drawable/bg_card_white">
-
-            <!-- Row 1 -->
-            <LinearLayout style="@style/PickupRow">
-                <TextView style="@style/PickupAvatar" android:text="AO" />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="16dp"
-                    android:orientation="vertical">
-                    <TextView style="@style/PickupName" android:text="Ava Okafor" />
-                    <TextView style="@style/PickupDetail" android:text="Daniel Okafor · 3:42 PM" />
-                </LinearLayout>
-                <TextView style="@style/StatusBadge.Verified" />
-            </LinearLayout>
-
-            <View style="@style/ListDivider" />
-
-            <!-- Row 2 -->
-            <LinearLayout style="@style/PickupRow">
-                <TextView style="@style/PickupAvatar" android:text="LM" />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="16dp"
-                    android:orientation="vertical">
-                    <TextView style="@style/PickupName" android:text="Leo Martin" />
-                    <TextView style="@style/PickupDetail" android:text="Sophie Martin · 3:31 PM" />
-                </LinearLayout>
-                <TextView style="@style/StatusBadge.Verified" />
-            </LinearLayout>
-
-            <View style="@style/ListDivider" />
-
-            <!-- Row 3 -->
-            <LinearLayout style="@style/PickupRow">
-                <TextView style="@style/PickupAvatar" android:text="ZK" />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="16dp"
-                    android:orientation="vertical">
-                    <TextView style="@style/PickupName" android:text="Zara Khan" />
-                    <TextView style="@style/PickupDetail" android:text="Imran Khan · 3:18 PM" />
-                </LinearLayout>
-                <TextView style="@style/StatusBadge.Override" />
-            </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRecentEmpty"
+            style="@style/EmptyText"
+            android:text="@string/home_no_pickups"
+            android:visibility="gone" />
     </LinearLayout>
 </ScrollView>
